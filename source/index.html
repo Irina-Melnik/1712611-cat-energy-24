@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -7,18 +7,16 @@
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body">
-  <header class="page-header">
-    <div class="page-header__menu-header">
-      <a class="logo-image" href="#">
-        <img class="logo-image__img" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Кэт энерджи">
+<body>
+  <header class="header">
+    <div class="header__menu-header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__img" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Кэт энерджи">
+        <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
       </a>
-      <a class="logo-text" href="#">
-        <img class="logo-text__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
-      </a>
-      <button class="page-header__menu-toggler" type="button" aria-label="Открыть меню">x</button>
+      <button class="header__menu-toggler" type="button" aria-label="Открыть меню">x</button>
     </div>
-    <nav class="page-header__nav main-nav">
+    <nav class="header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--current">
           <a href="#">Главная</a>
@@ -32,36 +30,36 @@
       </ul>
     </nav>
   </header>
-  <main class="page__content">
+  <main>
     <h1 class="visually-hidden">Cat Energy - функциональное питание для котов</h1>
     <section class="promo">
       <div class="promo__wrapper">
-        <h2 class="promo__title title">Функциональное питание&nbspдля&nbspкотов</h2>
+        <h2 class="promo__title title">Функциональное питание&nbsp;для&nbsp;котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <img class="promo__image promo__image--mobile" src="img/index-can-mobile.png" width="280" height="270"
           alt="Упаковка кошачьего корма из курицы">
         <a class="promo__link button" href="form.html">Подобрать программу</a>
       </div>
     </section>
-    <section class="programm">
-      <div class="programm__wrapper">
+    <section class="program">
+      <div class="program__wrapper">
         <h2 class="visually-hidden">Описание программ питания</h2>
-        <ul class="programm__list">
-          <li class="programm__item">
-            <h3 class="programm__title title">Похудение</h3>
-            <p class="programm__description">
+        <ul class="program__list">
+          <li class="program__item">
+            <h3 class="program__title title">Похудение</h3>
+            <p class="program__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy
               Slim поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a class="programm__link" href="form.html">Каталог slim</a>
+            <a class="program__link" href="weight-loss.html">Каталог slim</a>
           </li>
-          <li class="programm__item">
-            <h3 class="programm__title title">Набор массы</h3>
-            <p class="programm__description">
+          <li class="program__item">
+            <h3 class="program__title title">Набор массы</h3>
+            <p class="program__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
               нарастить необходимые мышцы!
             </p>
-            <a class="programm__link" href="form.html">Каталог pro</a>
+            <a class="program__link" href="weight-gain.html">Каталог pro</a>
           </li>
         </ul>
       </div>
@@ -112,7 +110,7 @@
             </div>
           </dl>
         </div>
-        <p class="example__costs">Затраты на питание: <span>15&nbsp000</span>&nbspруб.</p>
+        <p class="example__costs">Затраты на питание: <span>15&nbsp;000</span>&nbsp;руб.</p>
         <ul class="example__changes-list slider-list">
           <li class="example__changes-item slider-item slide-current">
             <img class="example__changes-image" src="img/cat-fat.png" width="280" height="232" alt="Пухлый кот">
@@ -123,7 +121,9 @@
         </ul>
         <p class="example__toggles slider__toggles">
           <button class="slider__toggle" type="button">Было</button>
-          <button class="slider__toggle"><span class="slider__toggle-line"></span></button>
+          <button class="slider__toggle">
+            <span class="slider__toggle-line"></span>
+          </button>
           <button class="slider__toggle" type="button">Стало</button>
         </p>
       </div>
@@ -131,7 +131,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__text">Приглашаем к&nbspсотрудничеству дилеров!</p>
+        <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         <div class="contacts__map">
           <iframe class="map"
@@ -142,33 +142,29 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__logo" href="#">
-        <img src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи">
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo footer-logo" href="#">
+        <img class="footer-logo__img" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи">
       </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" rel="noopener noreferrer"
-              aria-label="Мы в Вконтакте"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
-              rel="noopener noreferrer" aria-label="Мы в Инстаграме"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
-              rel="noopener noreferrer" aria-label="Мы в Фейсбуке"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer">
-          HTML Academy
-          <img class="copyright__link-logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
-      </div>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" rel="noopener noreferrer"
+            aria-label="Мы в Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
+            rel="noopener noreferrer" aria-label="Мы в Инстаграме"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+            rel="noopener noreferrer" aria-label="Мы в Фейсбуке"></a>
+        </li>
+      </ul>
+      <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer">
+        HTML Academy
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
     </div>
   </footer>
 </body>
