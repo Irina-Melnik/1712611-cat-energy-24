@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Ирина Мельник](https://up.htmlacademy.ru/adaptive/24/user/1712611).
-* Наставник: 'Михаил Данюшин'(https://htmlacademy.ru/profile/id225742).
+* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742).
 
 ---
 
