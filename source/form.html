@@ -37,37 +37,37 @@
         <h2 class="program-choice__title title">Подбор программы</h2>
         <p class="program-choice__text">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
-        <form class="program-choice__form form" action="https://echo.htmlacademy.ru/courses" method="get">
+        <form class="program-choice__form form" action="https://echo.htmlacademy.ru/courses" method="post">
           <fieldset class="form__fieldset personal-datа">
             <legend class="visually-hidden">Персональные данные</legend>
             <p class="personal-datа__item">
-              <label class="personal-data__label label" for="name">Имя:*</label>
-              <input class="personal-data__input personal-data__input--name input" type="text" id="name" name="name"
+              <label class="personal-data__label label" for="name">Имя:<sup>*</sup></label>
+              <input class="personal-data__input input" type="text" id="name" name="name"
                 placeholder="Барсик" autofocus required>
             </p>
             <p class="personal-datа__item">
-              <label class="personal-data__label label" for="weight">Вес&nbsp;(кг):*</label>
-              <input class="personal-data__input personal-data__input--weight input" type="number" id="weight"
+              <label class="personal-data__label label" for="weight">Вес&nbsp;(кг):<sup>*</sup></label>
+              <input class="personal-data__input input" type="number" id="weight"
                 name="weight" placeholder="7" min="1" max="20" required>
             </p>
             <p class="personal-datа__item">
               <label class="personal-data__label label" for="age">Возраст&nbsp;(лет):</label>
-              <input class="personal-data__input personal-data__input--age input" type="number" id="age" name="age"
-                placeholder="7" min="1">
+              <input class="personal-data__input input" type="number" id="age" name="age"
+                placeholder="7" min="1" max="20">
             </p>
           </fieldset>
           <fieldset class="form__fieldset filter-radio">
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="filter-radio__options">
               <li class="filter-radio__option">
-                <input class="visually-hidden" type="radio" name="program" value="weight-loss-program"
-                  id="weight-loss-program" checked>
-                <label class="filter-radio__label radio-button" for="weight-loss-program">Похудение</label>
+                <input class="visually-hidden" type="radio" name="program" value="loss"
+                  id="loss" checked>
+                <label class="filter-radio__label radio-button" for="loss">Похудение</label>
               </li>
               <li class="filter-radio__option">
-                <input class="visually-hidden" type="radio" name="program" value="weight-gain-program"
-                  id="weight-gain-program">
-                <label class="filter-radio__label radio-button" for="weight-gain-program">Набор массы</label>
+                <input class="visually-hidden" type="radio" name="program" value="gain"
+                  id="gain">
+                <label class="filter-radio__label radio-button" for="gain">Набор массы</label>
               </li>
               <li class="filter__option">
                 <input class="visually-hidden" type="radio" name="program" value="advice" id="advice">
@@ -79,12 +79,12 @@
             <legend class="сontact-data__title title">Контактные данные
               (владельца кота)</legend>
             <p class="сontact-data__item">
-              <label class="сontact-data__label label" for="email">E-&nbsp;mail:*</label>
+              <label class="сontact-data__label label" for="email">E-&nbsp;mail:<sup>*</sup></label>
               <input class="сontact-data__input сontact-data__input--email input" type="email" id="email" name="email"
                 placeholder="kuklachev@gmail.com" required>
             </p>
             <p class="сontact-data__item">
-              <label class="сontact-data__label label" for="phone">Телефон:*</label>
+              <label class="сontact-data__label label" for="phone">Телефон:<sup>*</sup></label>
               <input class="сontact-data__input сontact-data__input--phone input" id="phone" type="tel" name="phone"
                 placeholder="8 (960) 900-60-90" pattern="[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             </p>
@@ -99,26 +99,26 @@
             <ul class="filter-checkbox__options">
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-sweetener" checked>
-                <label class="filter-checkbox__label checkbox" for="optional-sweetener">сахарозаменитель</label>
+                <label class="filter-checkbox__label checkbox" for="optional-sweetener">Сахарозаменитель</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-water">
-                <label class="filter-checkbox__label checkbox" for="optional-water">питьевая
+                <label class="filter-checkbox__label checkbox" for="optional-water">Питьевая
                   вода</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-milk">
-                <label class="filter-checkbox__label checkbox" for="optional-milk">молоко</label>
+                <label class="filter-checkbox__label checkbox" for="optional-milk">Молоко</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-vitamins">
-                <label class="filter-checkbox__label checkbox" for="optional-vitamins">витамины</label>
+                <label class="filter-checkbox__label checkbox" for="optional-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <button class="form__button button" type="submit">Отправить заявку</button>
           <p class="form__required-fields">
-            <small>* — Обязательные поля</small>
+            <small><sup>*</sup> — Обязательные поля</small>
           </p>
         </form>
       </div>
@@ -131,14 +131,14 @@
       </div>
       <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002615!2d30.32085871544038!3d59.93871916905499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627282326753!5m2!1sru!2sru"
-        width="320" height="362" allowfullscreen="" loading="lazy" title="Офис компании по адресу ул. Большая
+        width="320" height="362" loading="lazy" title="Офис компании по адресу ул. Большая
           Конюшенная 19/8, Санкт-Петербург"></iframe>
     </section>
 
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo footer-logo" href="#">
+      <a class="footer__logo footer-logo" href="index.html">
         <img class="footer-logo__img" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи">
       </a>
       <ul class="footer__social social">
