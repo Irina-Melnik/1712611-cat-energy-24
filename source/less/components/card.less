@@ -1,0 +1,90 @@
+.card {
+  position: relative;
+  outline: 2px solid rgb(21, 44, 253);
+}
+
+.card__title {
+  position: relative;
+  left: 50%;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  width: 80px;
+  color: @special_dark-grey-2;
+  text-transform: uppercase;
+  margin-top: 19px;
+  margin-bottom: 14px;
+  cursor: pointer;
+
+  &--all {
+    position: static;
+    color: @special_dark-grey-3;
+    width: 100%;
+    text-align: center;
+    margin-top: 78px;
+    margin-bottom: 8px;
+  }
+}
+
+.card__params {
+  position: relative;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+  width: 140px;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.card__param-item {
+  display: flex;
+}
+
+.card__param-name,
+.card__param-value {
+  width: 50%;
+}
+
+.card__param-value {
+  text-align: right;
+}
+
+.card__image {
+  position: absolute;
+  top: 19px;
+}
+
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 10px 0;
+
+  &--all {
+    background-color: @basic_grey;
+    color: @special_dark-grey;
+
+    &:hover {
+      background-color: @basic_grey-2;
+    }
+
+    &:active {
+      color: rgba(@special_dark-grey, 0.3);
+      background-color: @basic_grey-2;
+    }
+  }
+}
+
+.card__text {
+  color: @special_dark-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 21px;
+}
