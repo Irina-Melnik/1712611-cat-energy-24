@@ -7,11 +7,16 @@
 html {
   min-height: 320px;
   height: 100%;
-  font-size: 14px;
   font-family: @font-family--primary;
-  font-weight: normal;
+  font-size: 14px;
   line-height: 1.29;
+  font-weight: normal;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 html,
