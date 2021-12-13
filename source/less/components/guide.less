@@ -5,30 +5,116 @@
 .guide__wrapper {
   .wrapper ();
   margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .guide__title {
   font-size: 36px;
   line-height: 1.11;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+    padding-bottom: 32px;
+  }
 }
 
 .guide__list {
   display: flex;
   flex-direction: column;
   .list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+  }
 }
 
 .guide__item {
   margin-bottom: 20px;
-}
 
-.guide__item:last-child {
-  margin-bottom: 0;
+  @media (min-width: @tablet-width) {
+    width: 45%;
+    min-width: 324px;
+    margin-bottom: 37px;
+  }
+
+  &--benefit {
+    @media (min-width: @desktop-width) {
+      min-width: 230px;
+      margin-right: 94px;
+    }
+  }
+
+  &--simple {
+    @media (min-width: @desktop-width) {
+      min-width: 246px;
+      margin-right: 80px;
+    }
+  }
+
+  &--meal {
+    @media (min-width: @desktop-width) {
+      min-width: 248px;
+      margin-right: 77px;
+    }
+  }
+
+  &--improvement {
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 37px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 250px;
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-of-type p {
+      width: 230px;
+      padding: 151px 29px 57px 0;
+    }
+
+    &:nth-of-type(2) p {
+      width: 246px;
+      padding: 151px 19px 57px 0;
+    }
+
+    &:nth-of-type(3) p {
+      width: 248px;
+      padding: 151px 39px 57px 0;
+    }
+
+    &:nth-of-type(4) p {
+      width: 250px;
+      padding: 151px 0 57px 0;
+    }
+  }
 }
 
 .guide__description {
   font-family: "Arial", sans-serif;
   line-height: 1.29;
   padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+    width: 85%;
+    padding: 151px 29px 57px 0;
+  }
 }

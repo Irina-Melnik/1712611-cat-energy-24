@@ -1,12 +1,17 @@
 .header {
-  display: flex;
-  flex-direction: column;
   outline: 2px solid rgb(6, 228, 62);
 }
 
-.header__menu-header,
-.header__nav {
+.header__wrapper {
   .wrapper ();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .header__menu-header {
@@ -14,6 +19,29 @@
   display: flex;
   justify-content: center;
   height: 65px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    height: 100px;
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 178px;
+    width: 202px;
+  }
+}
+
+.header__nav {
+  @media (min-width: @tablet-width) {
+    height: 100px;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 178px;
+    width: 478px;
+  }
 }
 
 .header__menu-toggler {
@@ -25,4 +53,8 @@
   border: none;
   padding: 0;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
