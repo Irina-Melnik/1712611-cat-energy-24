@@ -1,5 +1,15 @@
 .additional-card {
   outline: 2px solid rgb(225, 247, 28);
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 324px 326px 244px;
+  }
 }
 
 .additional-card__title {
@@ -10,6 +20,14 @@
   text-transform: uppercase;
   padding-top: 13px;
   padding-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 2";
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 27px;
+  }
 }
 
 .additional-card__params {
@@ -19,18 +37,70 @@
   line-height: 1;
   margin: 0;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"2/ 3";
+    grid-row: ~"1 / 2";
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .additional-card__param-item {
   display: flex;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+    margin-top: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: start;
+    gap: 112px;
+  }
 }
 
 .additional-card__param-name {
   width: 50%;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 132px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
 }
 
 .additional-card__param-value {
   width: 50%;
   text-align: right;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    text-align: start;
+  }
+}
+
+.additional-card__button {
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1 / 3";
+    grid-row: ~"2 / 3";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"3 / 4";
+    grid-row: ~"1 / 2";
+    margin: auto 0;
+  }
 }
