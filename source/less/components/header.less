@@ -1,7 +1,3 @@
-.header {
-  outline: 2px solid rgb(6, 228, 62);
-}
-
 .header__wrapper {
   .wrapper ();
   display: flex;
@@ -18,28 +14,28 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 65px;
+  min-height: 65px;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    height: 100px;
+    min-height: 100px;
     width: 174px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 178px;
+    min-height: 178px;
     width: 202px;
   }
 }
 
 .header__nav {
   @media (min-width: @tablet-width) {
-    height: 100px;
+    min-height: 100px;
     width: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 178px;
+    min-height: 178px;
     width: 478px;
   }
 }

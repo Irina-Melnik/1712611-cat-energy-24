@@ -19,13 +19,14 @@
     border: 2px solid @special_dark-grey;
   }
 
-  // &:required:invalid:not(:placeholder-shown) {
-  //   border: 2px solid @status_error;
-  // }
+  &:required:invalid:not(:placeholder-shown) {
+    border: 2px solid @status_error;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
     padding-left: 18px;
+    height: 52px;
   }
 }

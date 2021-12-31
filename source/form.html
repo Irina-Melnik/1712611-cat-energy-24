@@ -50,8 +50,8 @@
             <legend class="visually-hidden">Персональные данные</legend>
             <p class="personal-data__item">
               <label class="personal-data__label label" for="name">Имя:<sup>*</sup></label>
-              <input class="personal-data__input input" type="text" id="name" name="name" placeholder="Барсик" autofocus
-                required>
+              <input class="personal-data__input input" type="text" id="name" name="name" placeholder="Барсик"
+                minlength="2" autofocus required>
             </p>
             <p class="personal-data__item">
               <label class="personal-data__label label" for="weight">Вес&nbsp;(кг):<sup>*</sup></label>
@@ -69,15 +69,15 @@
             <ul class="filter-radio__options">
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="loss" id="loss" checked>
-                <label class="filter-radio__label radio-button" for="loss">Похудение</label>
+                <label class="filter-radio__label label" for="loss">Похудение</label>
               </li>
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="gain" id="gain">
-                <label class="filter-radio__label radio-button" for="gain">Набор массы</label>
+                <label class="filter-radio__label label" for="gain">Набор массы</label>
               </li>
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="advice" id="advice">
-                <label class="filter-radio__label radio-button" for="advice">Не знаю (Нужен ваш совет)</label>
+                <label class="filter-radio__label label" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -105,27 +105,29 @@
             <ul class="filter-checkbox__options">
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-sweetener" checked>
-                <label class="filter-checkbox__label checkbox" for="optional-sweetener">Сахарозаменитель</label>
+                <label class="filter-checkbox__label label" for="optional-sweetener">Сахарозаменитель</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-water">
-                <label class="filter-checkbox__label checkbox" for="optional-water">Питьевая
+                <label class="filter-checkbox__label label" for="optional-water">Питьевая
+                  вода Питьевая
+                  вода Питьевая
                   вода</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-milk">
-                <label class="filter-checkbox__label checkbox" for="optional-milk">Молоко</label>
+                <label class="filter-checkbox__label label" for="optional-milk">Молоко</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-vitamins">
-                <label class="filter-checkbox__label checkbox" for="optional-vitamins">Витамины</label>
+                <label class="filter-checkbox__label label" for="optional-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <div class="form__submit">
             <button class="form__button button" type="submit">Отправить заявку</button>
             <p class="form__required-fields">
-              <small><sup>*</sup> — Обязательные поля</small>
+              <sup>*</sup> — Обязательные поля
             </p>
           </div>
         </form>
@@ -141,12 +143,13 @@
       </div>
       <div class="contacts__map">
         <iframe class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002615!2d30.32085871544038!3d59.93871916905499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627282326753!5m2!1sru!2sru"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640887536214!5m2!1sru!2sru"
           width="320" height="362" loading="lazy" title="Офис компании по адресу ул. Большая
           Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <img class="map-static" src="img/location.jpg" width="320" height="362"
+          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </div>
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
