@@ -1,9 +1,5 @@
 .contacts {
-  &--inner-page {
-    background-color: @basic_grey;
-  }
   z-index: -2;
-
 
   iframe {
     border: none;
@@ -17,6 +13,8 @@
 
 .contacts__wrapper {
   .wrapper ();
+
+  background-color: @basic_grey;
 }
 
 .contacts__info {
@@ -34,7 +32,7 @@
 
 .contacts__text {
   color: @special_dark-grey-3;
-  padding: 26px 0;
+  padding: 26px 10px 26px 0;
   width: 50%;
   line-height: 1.43;
   text-transform: uppercase;
@@ -61,18 +59,33 @@
   width: 50%;
   padding: 26px 0;
 
+  span {
+    display: table;
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 1.25;
     width: 200px;
     text-align: end;
     padding: 56px 40px 63px 0;
+
+    span {
+      padding-top: 15px;
+      text-align: right;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 235px;
     text-align: start;
     padding-right: 80px;
+
+    span {
+      padding-top: 15px;
+      text-align: left;
+    }
   }
 }
 

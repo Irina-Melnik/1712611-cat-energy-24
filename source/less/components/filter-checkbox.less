@@ -18,18 +18,11 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 59px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 66px;
+    row-gap: 0;
   }
 }
 
 .filter-checkbox__option {
-  display: flex;
-  flex-wrap: wrap;
   font-size: 16px;
   text-transform: uppercase;
   padding-left: 46px;
@@ -38,21 +31,36 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
-    width: 284px;
+    width: calc((100% - 20px) / 2);
     padding-left: 59px;
     padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 325px;
-    padding-bottom: 0;
+    width: calc((100% - 60px) / 4);
+    padding-bottom: 66px;
+  }
+
+  &:not(:nth-child(2n)) {
+    @media (min-width: @tablet-width) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  &:not(:nth-child(4n)) {
+    @media (min-width: @desktop-width) {
+      margin-right: 20px;
+    }
   }
 
   &:last-child {
     padding-bottom: 41px;
 
     @media (min-width: @desktop-width) {
-      width: 244px;
       padding-bottom: 0;
     }
   }
