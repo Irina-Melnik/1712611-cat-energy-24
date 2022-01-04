@@ -42,15 +42,56 @@
 
 .header__menu-toggler {
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 24px;
+  right: 0;
+  z-index: 2;
+  display: block;
   width: 24px;
   height: 16px;
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
+
+  &--line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @basic_black;
+    box-shadow: 0 8px 0 0 @basic_black, 0 16px 0 0 @basic_black;
+  }
+
+  &--cross {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 24px;
+      height: 1.5px;
+      background-color: @basic_black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
+

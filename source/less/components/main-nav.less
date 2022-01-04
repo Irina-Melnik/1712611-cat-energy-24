@@ -1,23 +1,98 @@
+.main-nav {
+  position: relative;
+  width: auto;
+
+  @media (max-width: @mobile-width-only) {
+    &--opened {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: calc(100% + 40px);
+  z-index: 10;
+  min-height: 80vh;
+  background-color: @basic_white;
+}
+
+.main-nav--nojs .main-nav__list {
+  position: static;
+  min-height: 0;
+}
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   .list ();
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 24px;
+        left: 0;
+        height: 2px;
+        background: @basic_green;
+      }
+    }
+
+    // &--current a {
+    //   text-decoration: underline 2px solid @basic_green;
+    //   text-underline-offset: 8px;
+    // }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 33px;
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 24px;
+        left: 0;
+        height: 2px;
+        background: @basic_white;
+      }
+    }
   }
 }
 
 .main-nav__link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 66px;
-  width: 100%;
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 24px;
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
@@ -32,17 +107,31 @@
     opacity: 0.3;
   }
 
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: @special_grey-4;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 1.33;
     font-weight: normal;
-    height: 100px;
+    padding-top: 42px;
+    padding-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    color: @basic_white;
+    // color: @basic_white;
     font-size: 20px;
     line-height: 1.5;
-    height: 178px;
+    padding-top: 69px;
+    padding-bottom: 79px;
   }
 }
