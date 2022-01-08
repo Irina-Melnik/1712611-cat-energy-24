@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+  display: flex;
   width: auto;
 
   @media (max-width: @mobile-width-only) {
@@ -14,27 +15,39 @@
 }
 
 .main-nav--opened .main-nav__list {
-  position: absolute;
-  top: 0;
-  left: -20px;
-  width: calc(100% + 40px);
-  z-index: 10;
-  min-height: 80vh;
-  background-color: @basic_white;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: calc(100% + 40px);
+    z-index: 10;
+    min-height: 80vh;
+    background-color: @basic_white;
+  }
 }
 
 .main-nav--nojs .main-nav__list {
-  position: static;
-  min-height: 0;
+  @media (max-width: @mobile-width-only) {
+    position: static;
+    display: flex;
+    flex: auto;
+    min-height: 0;
+  }
 }
+
+// .main-nav--nojs .header__menu-toggler {
+//   display: none;
+// }
 
 .main-nav__list {
   display: flex;
   flex-direction: column;
+  align-self: center;
   .list ();
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: end;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -44,32 +57,32 @@
   @media (min-width: @tablet-width) {
     margin-right: 35px;
 
-    &:last-child {
+    &:nth-child(3) {
       margin-right: 0;
     }
 
-    &--current {
-      position: relative;
+    // &--current {
+    //   position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 24px;
-        left: 0;
-        height: 2px;
-        background: @basic_green;
-      }
-    }
-
-    // &--current a {
-    //   text-decoration: underline 2px solid @basic_green;
-    //   text-underline-offset: 8px;
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 24px;
+    //     left: 0;
+    //     height: 2px;
+    //     background: @basic_green;
+    //   }
     // }
+
+    &--current a {
+      text-decoration: underline 2px solid @basic_green;
+      text-underline-offset: 8px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 33px;
+    margin-right: 32px;
 
     &--current {
       position: relative;
@@ -123,15 +136,15 @@
     font-size: 18px;
     line-height: 1.33;
     font-weight: normal;
-    padding-top: 42px;
-    padding-bottom: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
     // color: @basic_white;
     font-size: 20px;
     line-height: 1.5;
-    padding-top: 69px;
-    padding-bottom: 79px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

@@ -21,9 +21,10 @@
           <img class="logo__text logo__text--desktop" src="img/logo-desktop.svg" width="202" height="59"
             alt="Кэт энерджи">
         </a>
-        <button class="header__menu-toggler" type="button" aria-label="Открыть меню">X</button>
+        <button class="header__menu-toggler header__menu-toggler--line" type="button"
+          aria-label="Открыть меню"></button>
       </div>
-      <nav class="header__nav main-nav">
+      <nav class="header__nav main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -173,6 +174,27 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.header__menu-toggler');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navToggle.classList.remove('header__menu-toggler--line');
+        navMain.classList.add('main-nav--opened');
+        navToggle.classList.add('header__menu-toggler--cross');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navToggle.classList.add('header__menu-toggler--line');
+        navMain.classList.remove('main-nav--opened');
+        navToggle.classList.remove('header__menu-toggler--cross');
+      }
+    });
+  </script>
 </body>
 
 </html>
