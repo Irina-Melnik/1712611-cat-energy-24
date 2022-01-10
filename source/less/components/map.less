@@ -16,11 +16,11 @@
 
 .map-static {
   position: absolute;
-  left: 0;
+  left: calc((100% - 320px) / 2);
+  // width: 100%;
   top: 0;
-  width: 100%;
   z-index: -1;
-  object-fit: contain;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     height: 400px;
