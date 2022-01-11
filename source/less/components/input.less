@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   padding-left: 15px;
+  padding-right: 50px;
   border: 1px solid @special_grey-3;
 
   &:hover {
@@ -19,7 +20,15 @@
     border: 2px solid @special_dark-grey;
   }
 
-  // &:required:invalid:not(:placeholder-shown) {
-  //   border: 2px solid @status_error;
-  // }
+  &:required:invalid:not(:placeholder-shown) {
+    border: 2px solid @status_error;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-right: 60px;
+    height: 52px;
+  }
 }

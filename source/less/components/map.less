@@ -1,4 +1,5 @@
 .map {
+  position: relative;
   border: none;
   width: 100%;
   background-color: @basic_grey-2;
@@ -10,5 +11,18 @@
 
   @media (min-width: @desktop-width) {
     min-width: 1440px;
+  }
+}
+
+.map-static {
+  position: absolute;
+  left: calc((100% - 320px) / 2);
+  // width: 100%;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
   }
 }

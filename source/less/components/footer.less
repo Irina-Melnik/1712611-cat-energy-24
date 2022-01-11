@@ -1,6 +1,5 @@
 .footer {
   background-color: @basic_grey;
-  outline: 2px solid rgb(21, 203, 248);
 }
 
 .footer__wrapper {
@@ -18,8 +17,9 @@
 }
 
 .footer__logo {
-  margin-top: 39px;
-  margin-bottom: 32px;
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid @special_grey-line;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -40,6 +40,8 @@
 }
 
 .footer__copyright {
+  border-top: 1px solid @special_grey-line;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     // margin-top: 57px;

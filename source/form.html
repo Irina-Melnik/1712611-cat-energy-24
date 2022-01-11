@@ -10,26 +10,34 @@
 
 <body>
   <header class="header">
-    <div class="header__menu-header">
-      <a class="header__logo logo" href="index.html">
-        <!-- <img class="logo__img" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Кэт энерджи"> -->
-        <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Кэт энерджи">
-      </a>
-      <button class="header__menu-toggler" type="button" aria-label="Открыть меню">X</button>
+    <div class="header__wrapper">
+      <div class="header__menu-header">
+        <a class="header__logo logo" href="index.html">
+          <!-- <img class="logo__img" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Кэт энерджи"> -->
+          <img class="logo__text logo__text--mobile" src="img/logo-mobile-text.svg" width="101" height="18"
+            alt="Кэт энерджи">
+          <img class="logo__text logo__text--tablet" src="img/logo-tablet.svg" width="174" height="52"
+            alt="Кэт энерджи">
+          <img class="logo__text logo__text--desktop" src="img/logo-desktop.svg" width="202" height="59"
+            alt="Кэт энерджи">
+        </a>
+        <button class="header__menu-toggler header__menu-toggler--line" type="button"
+          aria-label="Открыть меню"></button>
+      </div>
+      <nav class="header__nav main-nav main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__nav main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" href="#">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main>
     <h1 class="visually-hidden">Подбор программы питания для Вашего питомца</h1>
@@ -43,8 +51,8 @@
             <legend class="visually-hidden">Персональные данные</legend>
             <p class="personal-data__item">
               <label class="personal-data__label label" for="name">Имя:<sup>*</sup></label>
-              <input class="personal-data__input input" type="text" id="name" name="name" placeholder="Барсик" autofocus
-                required>
+              <input class="personal-data__input input" type="text" id="name" name="name" placeholder="Барсик"
+                minlength="2" autofocus required>
             </p>
             <p class="personal-data__item">
               <label class="personal-data__label label" for="weight">Вес&nbsp;(кг):<sup>*</sup></label>
@@ -62,15 +70,15 @@
             <ul class="filter-radio__options">
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="loss" id="loss" checked>
-                <label class="filter-radio__label radio-button" for="loss">Похудение</label>
+                <label class="filter-radio__label label" for="loss">Похудение</label>
               </li>
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="gain" id="gain">
-                <label class="filter-radio__label radio-button" for="gain">Набор массы</label>
+                <label class="filter-radio__label label" for="gain">Набор массы</label>
               </li>
               <li class="filter-radio__option">
                 <input class="visually-hidden" type="radio" name="program" value="advice" id="advice">
-                <label class="filter-radio__label radio-button" for="advice">Не знаю (Нужен ваш совет)</label>
+                <label class="filter-radio__label label" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -98,43 +106,46 @@
             <ul class="filter-checkbox__options">
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-sweetener" checked>
-                <label class="filter-checkbox__label checkbox" for="optional-sweetener">Сахарозаменитель</label>
+                <label class="filter-checkbox__label label" for="optional-sweetener">Сахарозаменитель</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-water">
-                <label class="filter-checkbox__label checkbox" for="optional-water">Питьевая
-                  вода</label>
+                <label class="filter-checkbox__label label" for="optional-water">Питьевая вода</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-milk">
-                <label class="filter-checkbox__label checkbox" for="optional-milk">Молоко</label>
+                <label class="filter-checkbox__label label" for="optional-milk">Молоко</label>
               </li>
               <li class="filter-checkbox__option">
                 <input class="visually-hidden" type="checkbox" name="optional" id="optional-vitamins">
-                <label class="filter-checkbox__label checkbox" for="optional-vitamins">Витамины</label>
+                <label class="filter-checkbox__label label" for="optional-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="form__button button" type="submit">Отправить заявку</button>
-          <p class="form__required-fields">
-            <small><sup>*</sup> — Обязательные поля</small>
-          </p>
+          <div class="form__submit">
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <p class="form__required-fields">
+              <sup>*</sup> — Обязательные поля
+            </p>
+          </div>
         </form>
       </div>
     </section>
-    <section class="contacts contacts--inner-page">
+    <section class="contacts">
       <div class="contacts__wrapper">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__info">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contacts__map">
-        <iframe class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002615!2d30.32085871544038!3d59.93871916905499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627282326753!5m2!1sru!2sru" width="320" height="362" loading="lazy" title="Офис компании по адресу ул. Большая
-          Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <iframe class="map" src="https://yandex.ru/map-widget/v1/-/CCUyVNc4DA" width="320" height="362"
+          title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <img class="map-static" src="img/location.jpg" width="320" height="362"
+          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </div>
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
@@ -161,6 +172,27 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.header__menu-toggler');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navToggle.classList.remove('header__menu-toggler--line');
+        navMain.classList.add('main-nav--opened');
+        navToggle.classList.add('header__menu-toggler--cross');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navToggle.classList.add('header__menu-toggler--line');
+        navMain.classList.remove('main-nav--opened');
+        navToggle.classList.remove('header__menu-toggler--cross');
+      }
+    });
+  </script>
 </body>
 
 </html>
