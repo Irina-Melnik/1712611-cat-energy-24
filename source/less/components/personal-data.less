@@ -1,6 +1,20 @@
 .personal-data {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: @special_grey-line;
+    }
+  }
 }
 
 .personal-data__item {

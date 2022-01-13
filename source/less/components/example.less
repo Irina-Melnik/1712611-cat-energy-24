@@ -79,7 +79,7 @@
 
 .example__list {
   display: flex;
-  margin: 0;
+  .list();
 }
 
 .example__item {
@@ -87,23 +87,87 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 70px;
+  border: 1px solid @special_grey;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
-    min-height: 87px;
-    margin-bottom: 47px;
+    margin-bottom: 85px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
     width: 162px;
   }
 }
 
 .example__item:first-child {
+  position: relative;
   margin-right: 32px;
 
   @media (min-width: @tablet-width) {
     margin-right: 42px;
+  }
+
+  &::after {
+    content: "снижение веса";
+    position: absolute;
+    left: calc((100% - 87px) / 2);
+    right: 19px;
+    bottom: -15px;
+    width: 87px;
+    min-height: 24px;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    padding: 0 14px;
+    background-color: @basic_gray-3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 14px;
+      width: 114px;
+      left: calc((100% - 114px) / 2);
+      bottom: -17px;
+      padding: 0 8px;
+      background-color: @basic_white;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @basic_grey;
+    }
+  }
+}
+
+.example__item:nth-child(2) {
+  position: relative;
+
+  &::after {
+    content: "затрачено времени";
+    position: absolute;
+    left: calc((100% - 87px) / 2);
+    right: 19px;
+    bottom: -15px;
+    width: 87px;
+    min-height: 24px;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    padding: 0 14px;
+    background-color: @basic_gray-3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 14px;
+      width: 142px;
+      left: calc((100% - 142px) / 2);
+      bottom: -17px;
+      padding: 0 5px;
+      background-color: @basic_white;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: @basic_grey;
+    }
   }
 }
 
@@ -113,32 +177,18 @@
   text-transform: uppercase;
   align-items: center;
   padding-top: 14px;
-  padding-bottom: 9px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 1.23;
     padding-top: 15px;
-    padding-bottom: 11px;
-  }
-}
-
-.example__description {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 1;
-  margin: 0;
-  width: 60px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    font-size: 14px;
-    width: 142px;
+    padding-bottom: 20px;
   }
 }
 
 .example__costs {
-  padding-top: 20px;
+  padding-top: 34px;
   padding-bottom: 40px;
   line-height: 1.43;
   text-transform: uppercase;
@@ -174,7 +224,6 @@
     }
   }
 }
-
 
 .example__changes-list {
   .list ();

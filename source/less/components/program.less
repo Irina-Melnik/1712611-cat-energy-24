@@ -75,12 +75,12 @@
 
 .program__link {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   color: inherit;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
-  max-width: 109px;
   padding: 19px 0 22px 19px;
   cursor: pointer;
 
@@ -88,26 +88,47 @@
     opacity: 0.3;
   }
 
-  &::before {
-    @media (max-width: @mobile-width-only) {
-      content: "";
+  &::after {
+    content: "";
+    margin-left: 15px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../../img/icon-arrow.svg");
+
+    &:hover {
+      transform: scale(2);
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: " ";
       position: absolute;
       top: 0;
       left: 20px;
-      width: 220%;
+      right: 20px;
+      width: calc(100% - 40px);
       height: 1px;
       background: @special_grey-line;
     }
   }
 
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
-    max-width: 180px;
     padding: 0 0 57px 52px;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 59px;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }
