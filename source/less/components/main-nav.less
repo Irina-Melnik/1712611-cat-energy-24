@@ -73,6 +73,14 @@
   }
 }
 
+.main-nav__item--current .main-nav__link--main {
+  @media (min-width: @desktop-width) {
+    text-decoration: underline 2px solid @basic_white;
+    text-underline-offset: 8px;
+  }
+}
+
+
 .main-nav__link {
   position: relative;
   display: block;
@@ -114,10 +122,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    // color: @basic_white;
     font-size: 20px;
     line-height: 1.5;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &--main {
+      color: @basic_white;
+    }
   }
 }

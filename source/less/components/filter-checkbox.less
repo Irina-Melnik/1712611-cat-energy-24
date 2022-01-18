@@ -3,12 +3,25 @@
   line-height: 1.08;
   padding-top: 23px;
   padding-bottom: 39px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1;
     padding-top: 0;
     padding-bottom: 62px;
+  }
+}
+
+.filter-checkbox__wrapper {
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
   }
 }
 
