@@ -46,8 +46,10 @@
         <h2 class="program-choice__title title">Подбор программы</h2>
         <p class="program-choice__text">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
-        <form class="program-choice__form form" action="https://echo.htmlacademy.ru/courses" method="post">
-          <fieldset class="form__fieldset personal-data">
+      </div>
+      <form class="program-choice__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="form__fieldset personal-data">
+          <div class="personal-data__wrapper">
             <legend class="visually-hidden">Персональные данные</legend>
             <p class="personal-data__item">
               <label class="personal-data__label label" for="name">Имя:<sup>*</sup></label>
@@ -64,27 +66,34 @@
               <input class="personal-data__input input" type="number" id="age" name="age" placeholder="7" min="1"
                 max="20">
             </p>
-          </fieldset>
-          <fieldset class="form__fieldset filter-radio">
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset filter-radio">
+          <div class="filter-radio__wrapper">
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="filter-radio__options">
               <li class="filter-radio__option">
-                <input class="visually-hidden" type="radio" name="program" value="loss" id="loss" checked>
+                <input class="visually-hidden filter-radio__input" type="radio" name="program" value="loss" id="loss"
+                  checked>
                 <label class="filter-radio__label label" for="loss">Похудение</label>
               </li>
               <li class="filter-radio__option">
-                <input class="visually-hidden" type="radio" name="program" value="gain" id="gain">
+                <input class="visually-hidden filter-radio__input" type="radio" name="program" value="gain" id="gain">
                 <label class="filter-radio__label label" for="gain">Набор массы</label>
               </li>
               <li class="filter-radio__option">
-                <input class="visually-hidden" type="radio" name="program" value="advice" id="advice">
+                <input class="visually-hidden filter-radio__input" type="radio" name="program" value="advice"
+                  id="advice">
                 <label class="filter-radio__label label" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form__fieldset contact-data">
-            <legend class="contact-data__title title">Контактные данные
-              (владельца кота)</legend>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset contact-data">
+          <legend class="contact-data__title title title--decor">
+            <span class="title__cover title__cover--break">Контактные данные (владельца кота)</span>
+          </legend>
+          <div class="contact-data__wrapper">
             <p class="contact-data__item">
               <label class="contact-data__label label" for="email">E-&nbsp;mail:<sup>*</sup></label>
               <input class="contact-data__input contact-data__input--email input" type="email" id="email" name="email"
@@ -95,40 +104,53 @@
               <input class="contact-data__input contact-data__input--phone input" id="phone" type="tel" name="phone"
                 placeholder="8 (960) 900-60-90" pattern="[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             </p>
-          </fieldset>
-          <fieldset class="form__fieldset comment">
-            <legend class="comment__title title">Комментарий</legend>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset comment">
+          <legend class="comment__title title title--decor">
+            <span class="title__cover">Комментарий</span>
+          </legend>
+          <div class="comment__wrapper">
             <textarea class="comment__text textarea" name="comment" id="comment-field"
               rows="10">Расскажите обо всех повадках кота</textarea>
-          </fieldset>
-          <fieldset class="form__fieldset filter-checkbox">
-            <legend class="filter-checkbox__title title">Дополнительно</legend>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset filter-checkbox">
+          <legend class="filter-checkbox__title title title--decor">
+            <span class="title__cover">Дополнительно</span>
+          </legend>
+          <div class="filter-checkbox__wrapper">
             <ul class="filter-checkbox__options">
               <li class="filter-checkbox__option">
-                <input class="visually-hidden" type="checkbox" name="optional" id="optional-sweetener" checked>
+                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="optional"
+                  id="optional-sweetener" checked>
                 <label class="filter-checkbox__label label" for="optional-sweetener">Сахарозаменитель</label>
               </li>
               <li class="filter-checkbox__option">
-                <input class="visually-hidden" type="checkbox" name="optional" id="optional-water">
+                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="optional"
+                  id="optional-water">
                 <label class="filter-checkbox__label label" for="optional-water">Питьевая вода</label>
               </li>
               <li class="filter-checkbox__option">
-                <input class="visually-hidden" type="checkbox" name="optional" id="optional-milk">
+                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="optional"
+                  id="optional-milk">
                 <label class="filter-checkbox__label label" for="optional-milk">Молоко</label>
               </li>
               <li class="filter-checkbox__option">
-                <input class="visually-hidden" type="checkbox" name="optional" id="optional-vitamins">
+                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="optional"
+                  id="optional-vitamins">
                 <label class="filter-checkbox__label label" for="optional-vitamins">Витамины</label>
               </li>
             </ul>
-          </fieldset>
-          <div class="form__submit">
-            <button class="form__button button" type="submit">Отправить заявку</button>
-            <p class="form__required-fields">
-              <sup>*</sup> — Обязательные поля
-            </p>
           </div>
-        </form>
+        </fieldset>
+        <div class="form__submit">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__required-fields">
+            <sup>*</sup> — Обязательные поля
+          </p>
+        </div>
+      </form>
       </div>
     </section>
     <section class="contacts">
@@ -192,6 +214,7 @@
         navToggle.classList.remove('header__menu-toggler--cross');
       }
     });
+
   </script>
 </body>
 

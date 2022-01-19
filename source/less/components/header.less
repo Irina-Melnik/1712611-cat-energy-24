@@ -1,3 +1,25 @@
+.header {
+  &--main {
+    @media (min-width: @desktop-width) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 694px;
+        background-image: url("../../img/index-background-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 -2px;
+        background-size: contain;
+        z-index: -1;
+      }
+    }
+  }
+}
+
 .header__wrapper {
   .wrapper ();
   display: flex;
@@ -19,25 +41,25 @@
 
   @media (min-width: @tablet-width) {
     min-height: 100px;
-    width: 174px;
+    min-width: 174px;
+    margin-right: 94px;
   }
 
   @media (min-width: @desktop-width) {
+    justify-content: start;
     min-height: 178px;
-    width: 202px;
+    width: 50%;
+    margin-right: 0;
   }
 }
 
 .header__nav {
   @media (min-width: @tablet-width) {
     min-height: 100px;
-    max-width: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 130px;
     min-height: 178px;
-    max-width: 610px;
   }
 }
 

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--main">
     <div class="header__wrapper">
       <div class="header__menu-header">
         <a class="header__logo logo" href="#">
@@ -27,13 +27,13 @@
       <nav class="header__nav main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--main" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--main" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--main" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -102,24 +102,18 @@
             по-прежнему спит по 16 часов в день.
           </p>
           <div class="example__stats">
-            <dl class="example__list">
-              <div class="example__item">
-                <dt class="example__number">
+            <ul class="example__list">
+              <li class="example__item">
+                <p class="example__number">
                   5 кг
-                </dt>
-                <dd class="example__description">
-                  снижение веса
-                </dd>
-              </div>
-              <div class="example__item">
-                <dt class="example__number">
+                </p>
+              </li>
+              <li class="example__item">
+                <p class="example__number">
                   60 дней
-                </dt>
-                <dd class="example__description">
-                  затрачено времени
-                </dd>
-              </div>
-            </dl>
+                </p>
+              </li>
+            </ul>
             <p class="example__costs">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span></p>
           </div>
         </div>
@@ -132,13 +126,14 @@
               <img class="example__changes-image" src="img/cat-skinny.png" width="280" height="232" alt="Худой кот">
             </li>
           </ul>
-          <p class="example__toggles slider__toggles">
+          <div class="example__toggles slider__toggles">
             <button class="slider__toggle" type="button">Было</button>
-            <button class="slider__toggle">
-              <span class="slider__toggle-line"></span>
-            </button>
+            <div class="slider__toggle scale">
+              <div class="scale__bar"></div>
+              <div class="scale__control scale__control--was"></div>
+            </div>
             <button class="slider__toggle" type="button">Стало</button>
-          </p>
+          </div>
         </div>
       </div>
     </section>

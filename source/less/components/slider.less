@@ -9,11 +9,13 @@
 .slider__toggles {
   display: flex;
   justify-content: space-between;
+  flex: initial;
+  align-items: center;
   margin: 0;
-  padding: 0 35px 40px 35px;
+  padding: 0 40px 40px 40px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 32px 60px 70px;
+    padding: 0 66px 60px 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,22 +24,39 @@
 }
 
 .slider__toggle {
-  display: inline-block;
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  padding: 0;
   border: none;
   background-color: @basic_gray-3;
   cursor: pointer;
 
+  &:first-child {
+    margin-right: 19px;
+  }
+
+  &:last-child {
+    margin-left: 19px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
-    // text-decoration: dotted underline rgba(@basic_black, 0.24) 1px;
-    // text-underline-offset: 8px;
+    text-decoration: dotted underline rgba(@basic_black, 0.24) 1px;
+    text-underline-offset: 8px;
+
+    &:first-child {
+      margin-right: 23px;
+    }
+
+    &:last-child {
+      margin-left: 23px;
+    }
   }
 
   @media (min-width: @desktop-width) {

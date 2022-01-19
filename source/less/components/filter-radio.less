@@ -1,3 +1,31 @@
+.filter-radio {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: @special_grey-line;
+    }
+  }
+}
+
+.filter-radio__wrapper {
+  .wrapper();
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
 .filter-radio__options {
   .list ();
 
@@ -30,5 +58,37 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 30px;
     }
+  }
+}
+
+.filter-radio__input + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -6px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special_grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -45px;
+    top: -1px;
+  }
+}
+
+.filter-radio__input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -34px;
+  width: 14px;
+  height: 14px;
+  background-color: @basic_green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 7px;
+    left: -37px;
   }
 }
