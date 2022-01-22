@@ -1,9 +1,13 @@
 .promo {
   color: @basic_white;
-  background-image: url("../img/index-background.jpg");
+  background-image: url("../../img/index-background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/index-background@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     color: @basic_black;
