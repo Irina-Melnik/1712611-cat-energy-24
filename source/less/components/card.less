@@ -24,6 +24,8 @@
   }
 
   &--all-products {
+    position: relative;
+
     @media (max-width: @mobile-width-only) {
       &::after {
         content: "";
@@ -249,5 +251,25 @@
       color: rgba(@special_dark-grey, 0.3);
       background-color: @basic_grey-2;
     }
+  }
+}
+
+.card__icon {
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    left: 130px;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 50px;
+    left: 90px;
   }
 }

@@ -109,3 +109,12 @@
     left: -40px;
   }
 }
+
+.filter-checkbox__input:hover + label::before {
+  border: 1px solid @basic_grey-1;
+}
+
+.filter-checkbox__input:disabled + .filter-checkbox__input:hover + label::before,
+.filter-checkbox__input:disabled + label {
+  opacity: 0.3;
+}

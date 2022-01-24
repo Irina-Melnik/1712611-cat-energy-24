@@ -16,8 +16,10 @@
     border: 1px solid @special_grey;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border: 2px solid @special_dark-grey;
+    border-radius: 0%;
   }
 
   &:required:invalid:not(:placeholder-shown) {

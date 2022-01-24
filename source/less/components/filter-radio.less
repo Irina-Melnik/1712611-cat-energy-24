@@ -92,3 +92,12 @@
     left: -37px;
   }
 }
+
+.filter-radio__input:hover + label::before {
+  border: 1px solid @basic_grey-1;
+}
+
+.filter-radio__input:disabled + .filter-radio__input:hover + label::before,
+.filter-radio__input:disabled + label {
+  opacity: 0.3;
+}

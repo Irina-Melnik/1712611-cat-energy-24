@@ -9,6 +9,24 @@
   cursor: pointer;
   height: 78px;
 
+  &:hover {
+    color: @basic_green;
+  }
+
+  &:active {
+    color: @basic_green;
+    opacity: 0.3;
+  }
+
+  &:hover .copyright__logo {
+    fill: @basic_green;
+  }
+
+  &:active .copyright__logo {
+    opacity: 0.3;
+    fill: @basic_green;
+  }
+
   @media (min-width: @tablet-width) {
     width: 163px;
     height: 34px;
@@ -16,5 +34,5 @@
 }
 
 .copyright__logo {
-  color: @special_dark-grey;
+  fill: @special_dark-grey;
 }
