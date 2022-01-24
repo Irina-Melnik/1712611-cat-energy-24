@@ -136,6 +136,12 @@
   padding: 19px 0 22px 19px;
   cursor: pointer;
 
+  &:hover .program__icon-arrow {
+    transition: 0.5s all linear;
+    transform: scaleX(1.4);
+    transform-origin: 0% 50%;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -167,16 +173,6 @@
 
 .program__icon-arrow {
   margin-left: 15px;
-
-  &:hover {
-    transition: 1s all ease;
-    transform: scaleX(1.4);
-    transform-origin: 0% 50%;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 
   @media (min-width: @tablet-width) {
     margin-left: 25px;

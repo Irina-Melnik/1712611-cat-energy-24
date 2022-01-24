@@ -26,6 +26,11 @@
     border: 2px solid @status_error;
   }
 
+  &:required:invalid:not(:placeholder-shown) + svg {
+    stroke: @status_error;
+    fill: @status_error;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;

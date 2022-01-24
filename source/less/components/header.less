@@ -38,21 +38,9 @@
 
 .header__menu-header {
   position: relative;
-  display: grid;
-  grid-template-columns: 33px 1fr 24px;
+  display: flex;
   min-height: 65px;
   align-items: center;
-
-  @media (max-width: @mobile-width-only) {
-    &::before {
-      content: "";
-      width: 34px;
-      height: 38px;
-      top: 11px;
-      left: 0;
-      background-image: url("../../img/logo-icon-mobile.svg");
-    }
-  }
 
   @media (min-width: @tablet-width) {
     display: flex;
