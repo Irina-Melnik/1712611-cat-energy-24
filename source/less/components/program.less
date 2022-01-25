@@ -24,6 +24,7 @@
 }
 
 .program__item {
+  position: relative;
   background-color: @basic_grey;
   margin-bottom: 20px;
 
@@ -42,6 +43,7 @@
 }
 
 .program__title {
+  position: relative;
   font-size: 24px;
   line-height: 1.54;
   font-weight: inherit;
@@ -56,6 +58,56 @@
 
   @media (min-width: @desktop-width) {
     padding: 77px 20px 73px 214px;
+  }
+}
+
+.program__decor {
+  position: absolute;
+
+  &--weight-loss {
+    top: 21px;
+    left: 22px;
+  }
+
+  &--weight-gain {
+    top: 24px;
+    left: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--weight-loss {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: auto;
+      right: 62px;
+    }
+
+    &--weight-gain {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: auto;
+      right: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--weight-loss {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+      right: auto;
+    }
+
+    &--weight-gain {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+      right: auto;
+    }
   }
 }
 
@@ -84,20 +136,14 @@
   padding: 19px 0 22px 19px;
   cursor: pointer;
 
-  &:active {
-    opacity: 0.3;
+  &:hover .program__icon-arrow {
+    transition: 0.5s all linear;
+    transform: scaleX(1.4);
+    transform-origin: 0% 50%;
   }
 
-  &::after {
-    content: "";
-    margin-left: 15px;
-    width: 24px;
-    height: 12px;
-    background-image: url("../../img/icon-arrow.svg");
-
-    &:hover {
-      transform: scale(2);
-    }
+  &:active {
+    opacity: 0.3;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -113,22 +159,22 @@
     }
   }
 
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.5;
+    gap: 25px;
     padding: 0 0 57px 52px;
-
-    &::after {
-      margin-left: 25px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 59px;
+  }
+}
 
-    &::after {
-      margin-left: 25px;
-    }
+.program__icon-arrow {
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
   }
 }
