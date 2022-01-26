@@ -1,9 +1,38 @@
-.slider__item {
-  display: none;
+.slider {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    height: 511px;
+  }
 }
 
-.slider__item--current {
-  display: block;
+.slider__item {
+  &--fat {
+    display: block;
+  }
+
+  &--skinny {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 592px;
+    height: 100%;
+    top: 0;
+
+    &--fat {
+      left: calc(50% - 296px);
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    }
+
+    &--skinny {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 296px);
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+  }
 }
 
 .slider__toggles {

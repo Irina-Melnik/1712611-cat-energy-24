@@ -1,12 +1,12 @@
 .promo {
   color: @basic_white;
-  background-image: url("../../img/index-background.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url("../../img/index-background.jpg"), linear-gradient(@basic_green, @basic_green 100%);
+  background-position: top center, top center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100% 50%;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/index-background@2x.jpg");
+    background-image: url("../../img/index-background@2x.jpg"), linear-gradient(@basic_green, @basic_green 100%);
   }
 
   @media (min-width: @tablet-width) {
