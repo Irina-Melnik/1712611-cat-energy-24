@@ -28,8 +28,9 @@
 }
 
 .social__icon {
-  stroke: #666666;
-  fill: #666666;
+  stroke: @special_grey-2;
+  stroke-width: 1;
+  fill: @special_grey-2;
 
   &:hover {
     stroke: @basic_green;
@@ -40,6 +41,11 @@
     stroke: @basic_green;
     fill: @basic_green;
     opacity: 0.3;
+  }
+
+  &--vkontakte,
+  &--instagram {
+    stroke-width: 0;
   }
 
   @media (min-width: @tablet-width) {
