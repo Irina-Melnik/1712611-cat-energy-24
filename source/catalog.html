@@ -6,10 +6,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/layout/320-catalog.png");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      html {
+        /* Планшетный макет */
+        background-image: url("img/layout/768-catalog.png");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1440px) {
+      html {
+        /* Десктопный макет */
+        background-image: url("/img/layout/1440-catalog.png");
+      }
+    }
+
+  </style>
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -309,7 +343,7 @@
       </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--inner-page">
         <div class="contacts__info">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
@@ -344,23 +378,23 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram"
-            href="https://www.instagram.com/htmlacademy" rel="noopener noreferrer" aria-label="Мы в Инстаграме">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
+            rel="noopener noreferrer" aria-label="Мы в Инстаграме">
             <svg class="social__icon social__icon--instagram" width="16" height="16">
               <use xlink:href="img/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" rel="noopener noreferrer" aria-label="Мы в Фейсбуке">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+            rel="noopener noreferrer" aria-label="Мы в Фейсбуке">
             <svg class="social__icon social__icon--facebook" width="22" height="22">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
       </ul>
-      <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive"
-        rel="noopener noreferrer">
+      <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer">
         HTML Academy
         <svg class="copyright__logo" width="27" height="34">
           <use xlink:href="img/sprite.svg#htmlacademy"></use>

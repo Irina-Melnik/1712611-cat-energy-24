@@ -6,10 +6,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/layout/320-form.png");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      html {
+        /* Планшетный макет */
+        background-image: url("img/layout/768-form.png");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1440px) {
+      html {
+        /* Десктопный макет */
+        background-image: url("/img/layout/1440-form.png");
+      }
+    }
+
+  </style>
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -155,11 +189,11 @@
       </form>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--inner-page">
         <div class="contacts__info">
           <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
       </div>
       <div class="contacts__map">

@@ -51,12 +51,18 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 4px;
+    padding-top: 4px;
   }
 }
 
 .main-nav__item {
   @media (min-width: @tablet-width) {
-    margin-right: 35px;
+    margin-right: 37px;
+
+    &:first-child {
+      margin-right: 34px;
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -69,7 +75,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 32px;
+    margin-right: 34px;
   }
 }
 
@@ -117,14 +123,14 @@
     font-size: 18px;
     line-height: 1.33;
     font-weight: normal;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 1.5;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
 
     &--main {

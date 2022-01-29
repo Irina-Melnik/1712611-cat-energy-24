@@ -63,20 +63,22 @@
   font-weight: normal;
   color: @special_dark-grey-2;
   text-transform: uppercase;
-  padding-top: 19px;
-  padding-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
     padding-top: 161px;
-    padding-bottom: 21px;
+    padding-bottom: 14px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 1.05;
-    padding-top: 162px;
+    padding-left: 8px;
+    padding-top: 164px;
+    padding-bottom: 18px;
   }
 
   &--all {
@@ -98,6 +100,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      padding-left: 2px;
+      width: 142px;
       padding-top: 160px;
     }
   }
@@ -113,7 +117,7 @@
   }
 
   &--small {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -128,13 +132,13 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: -43px;
+      top: -50px;
       left: 43px;
     }
   }
 
   &--big {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -166,17 +170,18 @@
   font-size: 12px;
   line-height: 1.33;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 1;
-    margin: 0 39px 26px 38px;
+    margin: 0 39px 32px 38px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 40px;
+    margin-right: 36px;
   }
 }
 
@@ -184,7 +189,7 @@
   display: flex;
 
   @media (min-width: @tablet-width) {
-    min-height: 34px;
+    min-height: 32px;
     border-bottom: 1px solid @special_grey;
   }
 }
@@ -215,11 +220,17 @@
     line-height: 1.13;
     width: 167px;
     margin: 0 auto;
-    padding-bottom: 87px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 40px;
+  }
+
+  &--all {
+    @media (min-width: @desktop-width) {
+      margin-left: 37px;
+    }
   }
 }
 
@@ -231,12 +242,15 @@
 
   @media (min-width: @tablet-width) {
     width: 77%;
-    margin: auto 37px 39px 39px;
+    margin: 0 37px 39px 39px;
   }
 
   @media (min-width: @desktop-width) {
     width: 69%;
-    margin: auto 38px 40px 39px;
+    margin-top: 2px;
+    margin-right: 38px;
+    margin-bottom: 40px;
+    margin-left: 39px;
   }
 
   &--all {
