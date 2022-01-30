@@ -28,20 +28,6 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-// Other styles
-
-export const stylesOther = () => {
-  return gulp.src('source/css/**/*.css', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename('styles.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
-
 // Styles unminified
 
 export const stylesUnminified = () => {
@@ -170,7 +156,6 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
-    stylesOther,
     stylesUnminified,
     html,
     scripts,
@@ -188,7 +173,6 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    stylesOther,
     stylesUnminified,
     html,
     scripts,

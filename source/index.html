@@ -13,37 +13,6 @@
   <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <!-- Pixel Glass -->
-  <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/layout/320-index.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      html {
-        /* Планшетный макет */
-        background-image: url("img/layout/768-index.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      html {
-        /* Десктопный макет */
-        background-image: url("/img/layout/1440-index.png");
-      }
-    }
-
-  </style>
-  <link href="css/styles.css" rel="stylesheet">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
-
 </head>
 
 <body>
@@ -196,11 +165,7 @@
             <button class="slider__toggle" type="button">Было</button>
             <div class="slider__toggle scale">
               <div class="scale__bar"></div>
-              <div class="scale__control scale__control--was">
-                <svg class="scale__control-circle" width="40" height="40">
-                  <use xlink:href="img/sprite.svg#scale-control"></use>
-                </svg>
-              </div>
+              <div class="scale__control scale__control--was scale__control--circle"></div>
             </div>
             <button class="slider__toggle" type="button">Стало</button>
           </div>
