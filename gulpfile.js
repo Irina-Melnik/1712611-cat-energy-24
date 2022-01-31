@@ -28,6 +28,20 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// Styles unminified
+
+export const stylesUnminified = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
+}
+
 // HTML
 
 const html = () => {
@@ -39,7 +53,7 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
 }
@@ -142,6 +156,7 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    stylesUnminified,
     html,
     scripts,
     svg,
@@ -158,6 +173,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    stylesUnminified,
     html,
     scripts,
     svg,

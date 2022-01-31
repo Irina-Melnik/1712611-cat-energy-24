@@ -44,7 +44,7 @@
       grid-column: ~"1 / 3";
       grid-row: ~"2 / 3";
       width: 100%;
-      margin-bottom: 67px;
+      margin-bottom: 70px;
     }
 
     &:nth-child(4) {
@@ -66,9 +66,8 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 72px;
-    padding: 0 70px;
+    padding: 0 67px 0 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,11 +79,13 @@
 }
 
 .form__button {
-  font-family: inherit;
+  font-size: 16px;
+  line-height: 1;
   padding: 0;
   border: none;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
     width: 44.9%;
     min-height: 52px;
   }
@@ -102,9 +103,15 @@
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
+    align-self: center;
     line-height: 1;
     width: 46.7%;
     text-align: start;
     padding: 0;
+    padding-left: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 83px;
   }
 }

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
@@ -116,6 +119,7 @@
         <fieldset class="form__fieldset comment">
           <legend class="comment__title title title--decor"><span class="title__cover">Комментарий</span></legend>
           <div class="comment__wrapper">
+            <label class="visually-hidden" for="comment-field">Расскажите обо всех повадках кота</label>
             <textarea class="comment__text textarea" name="comment" id="comment-field"
               rows="10">Расскажите обо всех повадках кота</textarea>
           </div>
@@ -155,11 +159,11 @@
       </form>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--inner-page">
         <div class="contacts__info">
           <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
       </div>
       <div class="contacts__map">
