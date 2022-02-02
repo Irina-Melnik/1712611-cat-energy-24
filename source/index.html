@@ -53,6 +53,11 @@
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <div class="promo__container">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x">
             <img class="promo__image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280"
@@ -131,34 +136,48 @@
         <div class="example__wrapper-column">
           <h2 class="example__title title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
-            спит
-            по 16
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
             часов в день.</p>
           <div class="example__stats">
-            <ul class="example__list">
-              <li class="example__item">
-                <p class="example__number">5 кг</p>
-              </li>
-              <li class="example__item">
-                <p class="example__number">60 дней</p>
-              </li>
-            </ul>
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__number">
+                  5 кг
+                </dt>
+                <dd class="example__description example__description--weight">
+                  снижение веса
+                </dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__number">
+                  60 дней
+                </dt>
+                <dd class="example__description example__description--time">
+                  затрачено времени
+                </dd>
+              </div>
+            </dl>
             <p class="example__costs">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span></p>
           </div>
         </div>
-        <div class="example__wrapper-column">
-          <ul class="example__changes-list slider">
+        <div class="example__wrapper-column slider">
+          <ul class="example__changes-list slider__list">
             <li class="example__changes-item slider__item slider__item--fat">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/cat-fat-tablet.webp 1x, img/cat-fat-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png, img/cat-fat-tablet@2x.png 2x">
                 <img class="example__changes-image" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" width="280"
                   height="232" alt="Пухлый кот">
               </picture>
             </li>
             <li class="example__changes-item slider__item slider__item--skinny">
-              <img class="example__changes-image" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" width="280"
-                height="232" alt="Худой кот">
+              <picture>
+                <source type="image/webp" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+                <img class="example__changes-image" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x"
+                  width="280" height="232" alt="Худой кот">
+              </picture>
             </li>
           </ul>
           <div class="example__toggles slider__toggles">
@@ -184,6 +203,11 @@
         <iframe class="map" src="https://yandex.ru/map-widget/v1/-/CCUyVNc4DA" width="320" height="362"
           title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg, img/location-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/location-tablet.jpg, img/location-tablet@2x.jpg 2x">
           <img class="map-static" src="img/location.jpg" srcset="img/location@2x.jpg 2x" width="320" height="362"
@@ -232,27 +256,7 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.header__menu-toggler');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navToggle.classList.remove('header__menu-toggler--line');
-        navMain.classList.add('main-nav--opened');
-        navToggle.classList.add('header__menu-toggler--cross');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navToggle.classList.add('header__menu-toggler--line');
-        navMain.classList.remove('main-nav--opened');
-        navToggle.classList.remove('header__menu-toggler--cross');
-      }
-    });
-
-  </script>
+  <script src="js/navigation.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 .slider {
   @media (min-width: @tablet-width) {
     position: relative;
-    height: 511px;
+    height: 519px;
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 35px 0 32px;
+    padding: 0 7px 0 32px;
   }
 }
 
@@ -85,6 +85,14 @@
 
     &:last-child {
       margin-left: 23px;
+    }
+
+    &:hover {
+      text-decoration: solid underline rgba(@basic_black, 0.4) 1px;
+    }
+
+    &:active {
+      text-decoration: none;
     }
   }
 

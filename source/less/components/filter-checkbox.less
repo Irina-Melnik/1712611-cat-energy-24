@@ -127,3 +127,12 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+.filter-checkbox__input:active + label::before,
+.filter-checkbox__input:focus + label::before {
+  border: 2px solid @special_dark-grey;
+}
+
+.filter-checkbox__label {
+  color: @basic_black;
+}

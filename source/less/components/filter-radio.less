@@ -101,3 +101,12 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+.filter-radio__input:active + label::before,
+.filter-radio__input:focus + label::before {
+  border: 2px solid @special_dark-grey;
+}
+
+.filter-radio__label {
+  color: @special_dark-grey-2;
+}
